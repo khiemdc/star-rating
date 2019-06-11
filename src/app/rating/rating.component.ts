@@ -14,6 +14,8 @@ export class RatingComponent implements OnInit {
   stars = [];
   starColor = 'buttonSuccess';
   
+  displayResult = false;
+
   constructor() {}
 
   ngOnInit() {
@@ -21,8 +23,9 @@ export class RatingComponent implements OnInit {
   }
 
   onClick(rating: number) {
-    console.log('You rated ' + (rating + 1) + ' out of ' + this.numberOfStars);
+    console.log('   You rated ' + (rating + 1) + ' out of ' + this.numberOfStars);
     this.ratingUpdated.emit(rating);
+    this.displayResult = true;
     return false;
   }
 

@@ -3,3 +3,6 @@
     >
   <mat-icon >{{ showStar(i) }}</mat-icon>
 </button>
+<p *ngIf="displayResult">
+  Your rated <span class="body-2">{{rating}}</span> / <span>{{numberOfStars}}</span>
+</p>
